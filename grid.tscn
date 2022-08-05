@@ -1,0 +1,275 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://reference_screenshoot.png" type="Texture" id=1]
+[ext_resource path="res://enemies.tscn" type="PackedScene" id=2]
+[ext_resource path="res://grid.gd" type="Script" id=3]
+
+[node name="grid" type="Node2D"]
+script = ExtResource( 3 )
+
+[node name="TextureRect" type="TextureRect" parent="."]
+modulate = Color( 1, 1, 1, 0.27451 )
+margin_right = 604.0
+margin_bottom = 803.0
+texture = ExtResource( 1 )
+expand = true
+stretch_mode = 5
+
+[node name="timerMovimientoEnemigo" type="Timer" parent="."]
+wait_time = 0.5
+autostart = true
+
+[node name="enemigos" parent="." instance=ExtResource( 2 )]
+position = Vector2( 97, 211 )
+
+[node name="enemigos2" parent="." instance=ExtResource( 2 )]
+position = Vector2( 140, 211 )
+
+[node name="enemigos3" parent="." instance=ExtResource( 2 )]
+position = Vector2( 183, 211 )
+
+[node name="enemigos8" parent="." instance=ExtResource( 2 )]
+position = Vector2( 527, 211 )
+
+[node name="enemigos9" parent="." instance=ExtResource( 2 )]
+position = Vector2( 484, 211 )
+
+[node name="enemigos10" parent="." instance=ExtResource( 2 )]
+position = Vector2( 441, 211 )
+
+[node name="enemigos11" parent="." instance=ExtResource( 2 )]
+position = Vector2( 398, 211 )
+
+[node name="enemigos12" parent="." instance=ExtResource( 2 )]
+position = Vector2( 355, 211 )
+
+[node name="enemigos13" parent="." instance=ExtResource( 2 )]
+position = Vector2( 312, 211 )
+
+[node name="enemigos14" parent="." instance=ExtResource( 2 )]
+position = Vector2( 269, 211 )
+
+[node name="enemigos15" parent="." instance=ExtResource( 2 )]
+position = Vector2( 226, 211 )
+
+[node name="enemigos4" parent="." instance=ExtResource( 2 )]
+position = Vector2( 97, 261 )
+alienType = 1
+row = 1
+
+[node name="enemigos5" parent="." instance=ExtResource( 2 )]
+position = Vector2( 140, 261 )
+alienType = 1
+row = 1
+
+[node name="enemigos6" parent="." instance=ExtResource( 2 )]
+position = Vector2( 183, 261 )
+alienType = 1
+row = 1
+
+[node name="enemigos16" parent="." instance=ExtResource( 2 )]
+position = Vector2( 527, 261 )
+alienType = 1
+row = 1
+
+[node name="enemigos17" parent="." instance=ExtResource( 2 )]
+position = Vector2( 484, 261 )
+alienType = 1
+row = 1
+
+[node name="enemigos18" parent="." instance=ExtResource( 2 )]
+position = Vector2( 441, 261 )
+alienType = 1
+row = 1
+
+[node name="enemigos19" parent="." instance=ExtResource( 2 )]
+position = Vector2( 398, 261 )
+alienType = 1
+row = 1
+
+[node name="enemigos20" parent="." instance=ExtResource( 2 )]
+position = Vector2( 355, 261 )
+alienType = 1
+row = 1
+
+[node name="enemigos21" parent="." instance=ExtResource( 2 )]
+position = Vector2( 312, 261 )
+alienType = 1
+row = 1
+
+[node name="enemigos22" parent="." instance=ExtResource( 2 )]
+position = Vector2( 269, 261 )
+alienType = 1
+row = 1
+
+[node name="enemigos23" parent="." instance=ExtResource( 2 )]
+position = Vector2( 226, 261 )
+alienType = 1
+row = 1
+
+[node name="enemigos7" parent="." instance=ExtResource( 2 )]
+position = Vector2( 97, 311 )
+alienType = 1
+row = 2
+
+[node name="enemigos24" parent="." instance=ExtResource( 2 )]
+position = Vector2( 140, 311 )
+alienType = 1
+row = 2
+
+[node name="enemigos25" parent="." instance=ExtResource( 2 )]
+position = Vector2( 183, 311 )
+alienType = 1
+row = 2
+
+[node name="enemigos26" parent="." instance=ExtResource( 2 )]
+position = Vector2( 527, 311 )
+alienType = 1
+row = 2
+
+[node name="enemigos27" parent="." instance=ExtResource( 2 )]
+position = Vector2( 484, 311 )
+alienType = 1
+row = 2
+
+[node name="enemigos28" parent="." instance=ExtResource( 2 )]
+position = Vector2( 441, 311 )
+alienType = 1
+row = 2
+
+[node name="enemigos29" parent="." instance=ExtResource( 2 )]
+position = Vector2( 398, 311 )
+alienType = 1
+row = 2
+
+[node name="enemigos30" parent="." instance=ExtResource( 2 )]
+position = Vector2( 355, 311 )
+alienType = 1
+row = 2
+
+[node name="enemigos31" parent="." instance=ExtResource( 2 )]
+position = Vector2( 312, 311 )
+alienType = 1
+row = 2
+
+[node name="enemigos32" parent="." instance=ExtResource( 2 )]
+position = Vector2( 269, 311 )
+alienType = 1
+row = 2
+
+[node name="enemigos33" parent="." instance=ExtResource( 2 )]
+position = Vector2( 226, 311 )
+alienType = 1
+row = 2
+
+[node name="enemigos34" parent="." instance=ExtResource( 2 )]
+position = Vector2( 97, 361 )
+alienType = 2
+row = 3
+
+[node name="enemigos35" parent="." instance=ExtResource( 2 )]
+position = Vector2( 140, 361 )
+alienType = 2
+row = 3
+
+[node name="enemigos36" parent="." instance=ExtResource( 2 )]
+position = Vector2( 183, 361 )
+alienType = 2
+row = 3
+
+[node name="enemigos37" parent="." instance=ExtResource( 2 )]
+position = Vector2( 527, 361 )
+alienType = 2
+row = 3
+
+[node name="enemigos38" parent="." instance=ExtResource( 2 )]
+position = Vector2( 484, 361 )
+alienType = 2
+row = 3
+
+[node name="enemigos39" parent="." instance=ExtResource( 2 )]
+position = Vector2( 441, 361 )
+alienType = 2
+row = 3
+
+[node name="enemigos40" parent="." instance=ExtResource( 2 )]
+position = Vector2( 398, 361 )
+alienType = 2
+row = 3
+
+[node name="enemigos41" parent="." instance=ExtResource( 2 )]
+position = Vector2( 355, 361 )
+alienType = 2
+row = 3
+
+[node name="enemigos42" parent="." instance=ExtResource( 2 )]
+position = Vector2( 312, 361 )
+alienType = 2
+row = 3
+
+[node name="enemigos43" parent="." instance=ExtResource( 2 )]
+position = Vector2( 269, 361 )
+alienType = 2
+row = 3
+
+[node name="enemigos44" parent="." instance=ExtResource( 2 )]
+position = Vector2( 226, 361 )
+alienType = 2
+row = 3
+
+[node name="enemigos45" parent="." instance=ExtResource( 2 )]
+position = Vector2( 97, 411 )
+alienType = 2
+row = 4
+
+[node name="enemigos46" parent="." instance=ExtResource( 2 )]
+position = Vector2( 140, 411 )
+alienType = 2
+row = 4
+
+[node name="enemigos47" parent="." instance=ExtResource( 2 )]
+position = Vector2( 183, 411 )
+alienType = 2
+row = 4
+
+[node name="enemigos48" parent="." instance=ExtResource( 2 )]
+position = Vector2( 527, 411 )
+alienType = 2
+row = 4
+
+[node name="enemigos49" parent="." instance=ExtResource( 2 )]
+position = Vector2( 484, 411 )
+alienType = 2
+row = 4
+
+[node name="enemigos50" parent="." instance=ExtResource( 2 )]
+position = Vector2( 441, 411 )
+alienType = 2
+row = 4
+
+[node name="enemigos51" parent="." instance=ExtResource( 2 )]
+position = Vector2( 398, 411 )
+alienType = 2
+row = 4
+
+[node name="enemigos52" parent="." instance=ExtResource( 2 )]
+position = Vector2( 355, 411 )
+alienType = 2
+row = 4
+
+[node name="enemigos53" parent="." instance=ExtResource( 2 )]
+position = Vector2( 312, 411 )
+alienType = 2
+row = 4
+
+[node name="enemigos54" parent="." instance=ExtResource( 2 )]
+position = Vector2( 269, 411 )
+alienType = 2
+row = 4
+
+[node name="enemigos55" parent="." instance=ExtResource( 2 )]
+position = Vector2( 226, 411 )
+alienType = 2
+row = 4
+
+[connection signal="timeout" from="timerMovimientoEnemigo" to="." method="_on_timerMovimientoEnemigo_timeout"]
