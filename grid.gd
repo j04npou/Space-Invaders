@@ -1,8 +1,10 @@
 extends Node2D
 
-var currentRow = 0
-var xtemp = 5
+var currentRow = 4
+#var xtemp = 8
 var xdir = 1
+var desplazamientoAlienX = 6
+var desplazamientoAlienY = 25
 
 
 # Declare member variables here. Examples:
@@ -10,7 +12,7 @@ var xdir = 1
 # var b = "text"
 
 
-# Called when the node enters the scene tree for the first time.
+# Called when the node enters thxdire scene tree for the first time.
 #func _ready():
 #	pass # Replace with function body.
 
@@ -21,15 +23,33 @@ var xdir = 1
 
 
 func _on_timerMovimientoEnemigo_timeout():
+	var xmax = 0
+	var xmin = 600
+	
 	for i in get_tree().get_nodes_in_group("enemies"):
 		if i.row == currentRow:
 			i.changeFrame()
-			i.position.x += xdir * 10
-	currentRow += 1
-	if currentRow > 4:
+			if xdir != 0:
+				i.position.x += xdir * desplazamientoAlienX
+			else:
+				i.position.y += desplazamientoAlienY
+		if currentRow == 0:
+			if i.position.x > xmax:
+				xmax = i.position.x
+			if i.position.x < xmin:
+				xmin = i.position.x
+	currentRow -= 1
+	if currentRow < 0:
 #		$timerMovimientoEnemigo.wait_time -= 0.02
-		currentRow = 0
-		xtemp += 1
-		if xtemp > 10:
-			xdir = -xdir
-			xtemp = 0
+		currentRow = 4
+		if xdir == 0:
+			if xmin < 40:
+				xdir = 1
+			else:
+				xdir = -1
+		elif (xdir < 0 and xmin < 40) or (xdir > 0 and xmax > 560):
+			xdir = 0
+#		xtemp += 1
+#		if xtemp >= 16:
+#			xdir = -xdir
+#			xtemp = 0
