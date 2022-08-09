@@ -42,6 +42,5 @@ func die():
 	$alien.collision_mask = 0
 	anim.play()
 
-
 func _on_animation_finished():
 	queue_free()

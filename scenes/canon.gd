@@ -2,6 +2,7 @@ extends Node2D
 
 var speed = 170
 var isBulletReady = true
+signal shot
 
 # Declare member variables here. Examples:
 # var a = 2
@@ -22,10 +23,11 @@ func _process(delta):
 		
 	if Input.is_action_pressed("ui_accept") and isBulletReady:
 		isBulletReady = false
-		var bullet = preload("res://canon_bullet.tscn").instance()
+		var bullet = preload("res://scenes/canon_bullet.tscn").instance()
 		get_parent().add_child(bullet)
 		bullet.position = position - Vector2(0,10)
 		bullet.connect("bulletReady", self, "_on_bulletReady")
+		emit_signal("shot")
 	if position.x < 50:
 		position.x = 50
 	elif position.x > 550:

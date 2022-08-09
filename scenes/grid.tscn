@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=2]
 
-[ext_resource path="res://enemies.tscn" type="PackedScene" id=2]
-[ext_resource path="res://grid.gd" type="Script" id=3]
+[ext_resource path="res://scenes/enemies.tscn" type="PackedScene" id=2]
+[ext_resource path="res://scenes/grid.gd" type="Script" id=3]
 
 [node name="grid" type="Node2D"]
 script = ExtResource( 3 )
