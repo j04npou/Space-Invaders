@@ -1,9 +1,10 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://reference_screenshoot.png" type="Texture" id=1]
 [ext_resource path="res://scenes/grid.tscn" type="PackedScene" id=2]
 [ext_resource path="res://scenes/canon.tscn" type="PackedScene" id=3]
 [ext_resource path="res://scenes/saucer.tscn" type="PackedScene" id=4]
+[ext_resource path="res://scenes/background.tscn" type="PackedScene" id=5]
 
 [sub_resource type="CanvasItemMaterial" id=1]
 blend_mode = 3
@@ -17,19 +18,10 @@ margin_right = 615.0
 margin_bottom = 813.0
 color = Color( 0, 0, 0, 1 )
 
-[node name="TextureRect2" type="TextureRect" parent="."]
-visible = false
-modulate = Color( 1, 1, 1, 0.27451 )
-margin_right = 604.0
-margin_bottom = 803.0
-texture = ExtResource( 1 )
-expand = true
-stretch_mode = 5
-
-[node name="grid" parent="." instance=ExtResource( 2 )]
-
 [node name="canon" parent="." instance=ExtResource( 3 )]
 position = Vector2( 50, 680 )
+
+[node name="grid" parent="." instance=ExtResource( 2 )]
 
 [node name="green1" type="ColorRect" parent="."]
 material = SubResource( 1 )
@@ -47,8 +39,19 @@ margin_right = 360.0
 margin_bottom = 771.0
 color = Color( 0.466667, 1, 0.0235294, 1 )
 
+[node name="background" parent="." instance=ExtResource( 5 )]
+
+[node name="TextureRect2" type="TextureRect" parent="."]
+visible = false
+modulate = Color( 1, 1, 1, 0.27451 )
+margin_right = 604.0
+margin_bottom = 803.0
+texture = ExtResource( 1 )
+expand = true
+stretch_mode = 5
+
 [node name="saucer" parent="." instance=ExtResource( 4 )]
 position = Vector2( -23, 135 )
 
-[connection signal="saucercall" from="grid" to="saucer" method="_on_grid_saucercall"]
 [connection signal="shot" from="canon" to="saucer" method="_on_canon_shot"]
+[connection signal="saucercall" from="grid" to="saucer" method="_on_grid_saucercall"]
