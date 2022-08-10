@@ -1,12 +1,14 @@
 extends Node2D
+
 signal saucercall
 
 var currentRow = 4
 #var xtemp = 8
 var xdir = 1
 var desplazamientoAlienX = 6
-var desplazamientoAlienY = 25
+var desplazamientoAlienY = 26
 var saucer_called = false
+var yStartSaucer = 500
 
 
 # Declare member variables here. Examples:
@@ -31,11 +33,11 @@ func _on_timerMovimientoEnemigo_timeout():
 	
 	for i in get_tree().get_nodes_in_group("enemies"):
 		if i.row == currentRow:
-			i.changeFrame()
 			if xdir != 0:
 				i.position.x += xdir * desplazamientoAlienX
 			else:
 				i.position.y += desplazamientoAlienY
+			i.changeFrame()
 		if currentRow == 0:
 			if i.position.x > xmax:
 				xmax = i.position.x
@@ -54,6 +56,6 @@ func _on_timerMovimientoEnemigo_timeout():
 				xdir = -1
 		elif (xdir < 0 and xmin < 40) or (xdir > 0 and xmax > 560):
 			xdir = 0
-		if ymax > 420 and !saucer_called:
+		if ymax > yStartSaucer and !saucer_called:
 			emit_signal("saucercall")
 			saucer_called = true

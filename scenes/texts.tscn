@@ -1,0 +1,111 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://fonts/pixelmix.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://sprites/sprites-tilemap.png" type="Texture" id=2]
+
+[sub_resource type="DynamicFont" id=1]
+size = 24
+font_data = ExtResource( 1 )
+
+[sub_resource type="AtlasTexture" id=4]
+atlas = ExtResource( 2 )
+region = Rect2( 13, 52, 13, 13 )
+
+[sub_resource type="AtlasTexture" id=2]
+atlas = ExtResource( 2 )
+region = Rect2( 26, 52, 13, 13 )
+
+[sub_resource type="AtlasTexture" id=3]
+atlas = ExtResource( 2 )
+region = Rect2( 0, 52, 13, 13 )
+
+[sub_resource type="SpriteFrames" id=5]
+animations = [ {
+"frames": [ SubResource( 4 ), SubResource( 2 ), SubResource( 4 ), SubResource( 2 ) ],
+"loop": true,
+"name": "death",
+"speed": 5.0
+}, {
+"frames": [ SubResource( 3 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[node name="texts" type="Node2D"]
+
+[node name="score1_label" type="Label" parent="."]
+margin_right = 192.0
+margin_bottom = 28.0
+custom_fonts/font = SubResource( 1 )
+text = "  SCORE<1>  "
+
+[node name="score1" type="Label" parent="."]
+margin_right = 192.0
+margin_bottom = 73.0
+custom_fonts/font = SubResource( 1 )
+text = "0000"
+align = 1
+valign = 2
+
+[node name="hiscore_label" type="Label" parent="."]
+margin_right = 600.0
+margin_bottom = 28.0
+custom_fonts/font = SubResource( 1 )
+text = "HI-SCORE"
+align = 1
+
+[node name="hiscore" type="Label" parent="."]
+margin_right = 600.0
+margin_bottom = 72.0
+custom_fonts/font = SubResource( 1 )
+text = "0000"
+align = 1
+valign = 2
+
+[node name="score2_label" type="Label" parent="."]
+margin_left = 402.0
+margin_right = 600.0
+margin_bottom = 28.0
+custom_fonts/font = SubResource( 1 )
+text = "  SCORE<2>  "
+align = 2
+
+[node name="score2" type="Label" parent="."]
+margin_left = 402.0
+margin_right = 600.0
+margin_bottom = 72.0
+custom_fonts/font = SubResource( 1 )
+text = "0000"
+align = 1
+valign = 2
+
+[node name="Line2D" type="Line2D" parent="."]
+position = Vector2( 0, 713 )
+points = PoolVector2Array( 0, 0, 600, 0 )
+width = 3.0
+default_color = Color( 1, 1, 1, 1 )
+
+[node name="lives" type="Label" parent="."]
+margin_top = 715.0
+margin_right = 42.0
+margin_bottom = 739.0
+custom_fonts/font = SubResource( 1 )
+text = "3"
+align = 2
+valign = 2
+
+[node name="credits" type="Label" parent="."]
+margin_left = 386.0
+margin_top = 715.0
+margin_right = 604.0
+margin_bottom = 739.0
+custom_fonts/font = SubResource( 1 )
+text = "CREDITS 08"
+valign = 2
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+modulate = Color( 0, 1, 0, 1 )
+position = Vector2( 88, 729 )
+scale = Vector2( 2.7, 3 )
+frames = SubResource( 5 )

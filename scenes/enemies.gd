@@ -36,6 +36,9 @@ func changeFrame():
 	else:
 		anim.frame = 0
 		
+	if position.y > 570:
+		anim.modulate = Color(0,1,0,1)
+	
 func die():
 	anim.animation = "death"
 	$alien.collision_layer = 0

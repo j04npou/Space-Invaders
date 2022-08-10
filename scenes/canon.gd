@@ -28,10 +28,10 @@ func _process(delta):
 		bullet.position = position - Vector2(0,10)
 		bullet.connect("bulletReady", self, "_on_bulletReady")
 		emit_signal("shot")
-	if position.x < 50:
-		position.x = 50
-	elif position.x > 550:
-		position.x = 550
+	if position.x < 60:
+		position.x = 60
+	elif position.x > 540:
+		position.x = 540
 
 func _on_bulletReady():
 	isBulletReady = true

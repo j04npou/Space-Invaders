@@ -2,7 +2,7 @@ extends Node2D
 
 signal bulletReady
 
-var speed = 400
+var speed = 700
 
 # Declare member variables here. Examples:
 # var a = 2
@@ -17,14 +17,18 @@ var speed = 400
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	position.y -= speed * delta
-	
-	if position.y < -10:
-		emit_signal("bulletReady")
-		queue_free()
-
+	if position.y < 120:
+		speed = 0
+		$AnimatedSprite.play("death")
 
 func _on_Area2D_body_entered(body):
 #	print(body.name)
 	body.get_parent().die()
+	$AnimatedSprite.play("death")
+	speed = 0
+	$AnimatedSprite.visible = false
+
+
+func _on_AnimatedSprite_animation_finished():
 	emit_signal("bulletReady")
 	queue_free()
