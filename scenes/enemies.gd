@@ -1,16 +1,12 @@
 extends Node2D
 
+signal dead
+
 export var alienType = 0
 export var row = 0
 
 var anim
 
-# Declare member variables here. Examples:
-# var a = 2
-# var b = "text"
-
-
-# Called when the node enters the scene tree for the first time.
 func _ready():
 	add_to_group("enemies")
 	
@@ -46,4 +42,10 @@ func die():
 	anim.play()
 
 func _on_animation_finished():
+	emit_signal("dead")
 	queue_free()
+
+func _input(event):
+	if event is InputEventMouseButton:
+		if event.position.distance_to(global_position) <20:
+			die()

@@ -8,6 +8,7 @@ script = ExtResource( 3 )
 
 [node name="timerMovimientoEnemigo" type="Timer" parent="."]
 wait_time = 0.16
+one_shot = true
 autostart = true
 
 [node name="enemigos" parent="." instance=ExtResource( 2 )]
@@ -262,5 +263,3 @@ row = 4
 position = Vector2( 212, 411 )
 alienType = 2
 row = 4
-
-[connection signal="timeout" from="timerMovimientoEnemigo" to="." method="_on_timerMovimientoEnemigo_timeout"]

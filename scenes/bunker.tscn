@@ -1,0 +1,222 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://scenes/bunker/bunker_diagonal.tscn" type="PackedScene" id=4]
+[ext_resource path="res://scenes/bunker/bunker_bloque.tscn" type="PackedScene" id=5]
+
+[node name="bunker_4x4" type="Node2D"]
+modulate = Color( 0, 1, 0, 1 )
+scale = Vector2( 0.75, 0.8 )
+
+[node name="bunker_bloque" parent="." instance=ExtResource( 5 )]
+position = Vector2( 16, 0 )
+
+[node name="bunker_bloque2" parent="." instance=ExtResource( 5 )]
+position = Vector2( 24, 0 )
+
+[node name="bunker_bloque3" parent="." instance=ExtResource( 5 )]
+position = Vector2( 32, 0 )
+
+[node name="bunker_bloque5" parent="." instance=ExtResource( 5 )]
+position = Vector2( 40, 0 )
+
+[node name="bunker_bloque6" parent="." instance=ExtResource( 5 )]
+position = Vector2( 48, 0 )
+
+[node name="bunker_bloque7" parent="." instance=ExtResource( 5 )]
+position = Vector2( 56, 0 )
+
+[node name="bunker_techo_dcha" parent="." instance=ExtResource( 4 )]
+position = Vector2( 64, 0 )
+animation = "default"
+flip_h = true
+
+[node name="bunker_techo_dcha2" parent="." instance=ExtResource( 4 )]
+position = Vector2( 72, 8 )
+animation = "default"
+flip_h = true
+
+[node name="bunker_puerta_dcha" parent="." instance=ExtResource( 4 )]
+position = Vector2( 48, 40 )
+animation = "default"
+flip_v = true
+
+[node name="bunker_puerta_dcha2" parent="." instance=ExtResource( 4 )]
+position = Vector2( 56, 48 )
+animation = "default"
+flip_v = true
+
+[node name="bunker_puerta_izda" parent="." instance=ExtResource( 4 )]
+position = Vector2( 24, 40 )
+animation = "default"
+flip_h = true
+flip_v = true
+
+[node name="bunker_puerta_izda2" parent="." instance=ExtResource( 4 )]
+position = Vector2( 16, 48 )
+animation = "default"
+flip_h = true
+flip_v = true
+
+[node name="bunker_techo_izda" parent="." instance=ExtResource( 4 )]
+position = Vector2( 8, 0 )
+animation = "default"
+
+[node name="bunker_techo_izda2" parent="." instance=ExtResource( 4 )]
+position = Vector2( 0, 8 )
+animation = "default"
+
+[node name="bunker_bloque8" parent="." instance=ExtResource( 5 )]
+position = Vector2( 16, 8 )
+
+[node name="bunker_bloque15" parent="." instance=ExtResource( 5 )]
+position = Vector2( 8, 8 )
+
+[node name="bunker_bloque9" parent="." instance=ExtResource( 5 )]
+position = Vector2( 24, 8 )
+
+[node name="bunker_bloque10" parent="." instance=ExtResource( 5 )]
+position = Vector2( 32, 8 )
+
+[node name="bunker_bloque12" parent="." instance=ExtResource( 5 )]
+position = Vector2( 40, 8 )
+
+[node name="bunker_bloque13" parent="." instance=ExtResource( 5 )]
+position = Vector2( 48, 8 )
+
+[node name="bunker_bloque14" parent="." instance=ExtResource( 5 )]
+position = Vector2( 56, 8 )
+
+[node name="bunker_bloque16" parent="." instance=ExtResource( 5 )]
+position = Vector2( 64, 8 )
+
+[node name="bunker_bloque28" parent="." instance=ExtResource( 5 )]
+position = Vector2( 8, 16 )
+
+[node name="bunker_bloque29" parent="." instance=ExtResource( 5 )]
+position = Vector2( 0, 16 )
+
+[node name="bunker_bloque31" parent="." instance=ExtResource( 5 )]
+position = Vector2( 16, 16 )
+
+[node name="bunker_bloque32" parent="." instance=ExtResource( 5 )]
+position = Vector2( 24, 16 )
+
+[node name="bunker_bloque33" parent="." instance=ExtResource( 5 )]
+position = Vector2( 32, 16 )
+
+[node name="bunker_bloque35" parent="." instance=ExtResource( 5 )]
+position = Vector2( 40, 16 )
+
+[node name="bunker_bloque36" parent="." instance=ExtResource( 5 )]
+position = Vector2( 48, 16 )
+
+[node name="bunker_bloque37" parent="." instance=ExtResource( 5 )]
+position = Vector2( 56, 16 )
+
+[node name="bunker_bloque38" parent="." instance=ExtResource( 5 )]
+position = Vector2( 64, 16 )
+
+[node name="bunker_bloque39" parent="." instance=ExtResource( 5 )]
+position = Vector2( 72, 16 )
+
+[node name="bunker_bloque41" parent="." instance=ExtResource( 5 )]
+position = Vector2( 8, 24 )
+
+[node name="bunker_bloque42" parent="." instance=ExtResource( 5 )]
+position = Vector2( 0, 24 )
+
+[node name="bunker_bloque44" parent="." instance=ExtResource( 5 )]
+position = Vector2( 16, 24 )
+
+[node name="bunker_bloque45" parent="." instance=ExtResource( 5 )]
+position = Vector2( 24, 24 )
+
+[node name="bunker_bloque46" parent="." instance=ExtResource( 5 )]
+position = Vector2( 32, 24 )
+
+[node name="bunker_bloque48" parent="." instance=ExtResource( 5 )]
+position = Vector2( 40, 24 )
+
+[node name="bunker_bloque49" parent="." instance=ExtResource( 5 )]
+position = Vector2( 48, 24 )
+
+[node name="bunker_bloque50" parent="." instance=ExtResource( 5 )]
+position = Vector2( 56, 24 )
+
+[node name="bunker_bloque51" parent="." instance=ExtResource( 5 )]
+position = Vector2( 64, 24 )
+
+[node name="bunker_bloque52" parent="." instance=ExtResource( 5 )]
+position = Vector2( 72, 24 )
+
+[node name="bunker_bloque80" parent="." instance=ExtResource( 5 )]
+position = Vector2( 8, 32 )
+
+[node name="bunker_bloque81" parent="." instance=ExtResource( 5 )]
+position = Vector2( 0, 32 )
+
+[node name="bunker_bloque83" parent="." instance=ExtResource( 5 )]
+position = Vector2( 16, 32 )
+
+[node name="bunker_bloque84" parent="." instance=ExtResource( 5 )]
+position = Vector2( 24, 32 )
+
+[node name="bunker_bloque85" parent="." instance=ExtResource( 5 )]
+position = Vector2( 32, 32 )
+
+[node name="bunker_bloque87" parent="." instance=ExtResource( 5 )]
+position = Vector2( 40, 32 )
+
+[node name="bunker_bloque88" parent="." instance=ExtResource( 5 )]
+position = Vector2( 48, 32 )
+
+[node name="bunker_bloque89" parent="." instance=ExtResource( 5 )]
+position = Vector2( 56, 32 )
+
+[node name="bunker_bloque90" parent="." instance=ExtResource( 5 )]
+position = Vector2( 64, 32 )
+
+[node name="bunker_bloque91" parent="." instance=ExtResource( 5 )]
+position = Vector2( 72, 32 )
+
+[node name="bunker_bloque93" parent="." instance=ExtResource( 5 )]
+position = Vector2( 56, 40 )
+
+[node name="bunker_bloque94" parent="." instance=ExtResource( 5 )]
+position = Vector2( 64, 40 )
+
+[node name="bunker_bloque95" parent="." instance=ExtResource( 5 )]
+position = Vector2( 72, 40 )
+
+[node name="bunker_bloque101" parent="." instance=ExtResource( 5 )]
+position = Vector2( 64, 48 )
+
+[node name="bunker_bloque102" parent="." instance=ExtResource( 5 )]
+position = Vector2( 72, 48 )
+
+[node name="bunker_bloque105" parent="." instance=ExtResource( 5 )]
+position = Vector2( 0, 48 )
+
+[node name="bunker_bloque106" parent="." instance=ExtResource( 5 )]
+position = Vector2( 8, 48 )
+
+[node name="bunker_bloque108" parent="." instance=ExtResource( 5 )]
+position = Vector2( 0, 56 )
+
+[node name="bunker_bloque109" parent="." instance=ExtResource( 5 )]
+position = Vector2( 8, 56 )
+
+[node name="bunker_bloque110" parent="." instance=ExtResource( 5 )]
+position = Vector2( 64, 56 )
+
+[node name="bunker_bloque111" parent="." instance=ExtResource( 5 )]
+position = Vector2( 72, 56 )
+
+[node name="bunker_bloque98" parent="." instance=ExtResource( 5 )]
+position = Vector2( 0, 40 )
+
+[node name="bunker_bloque99" parent="." instance=ExtResource( 5 )]
+position = Vector2( 8, 40 )
+
+[node name="bunker_bloque100" parent="." instance=ExtResource( 5 )]
+position = Vector2( 16, 40 )

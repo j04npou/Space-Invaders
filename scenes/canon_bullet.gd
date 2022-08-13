@@ -23,11 +23,15 @@ func _process(delta):
 
 func _on_Area2D_body_entered(body):
 #	print(body.name)
+	$Area2D.collision_layer = 0
+	$Area2D.collision_mask = 0
 	body.get_parent().die()
 	$AnimatedSprite.play("death")
 	speed = 0
-	$AnimatedSprite.visible = false
-
+	if "alien" in body.name:
+		$AnimatedSprite.visible = false
+	if position.y > 570:
+		modulate = Color(0,1,0,1)
 
 func _on_AnimatedSprite_animation_finished():
 	emit_signal("bulletReady")

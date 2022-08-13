@@ -99,6 +99,7 @@ scale = Vector2( 2.7, 3 )
 frames = SubResource( 12 )
 
 [node name="alien" type="KinematicBody2D" parent="."]
+input_pickable = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="alien"]
 position = Vector2( -1, 2 )
