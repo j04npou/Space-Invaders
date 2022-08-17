@@ -4,6 +4,7 @@ signal dead
 
 export var alienType = 0
 export var row = 0
+export var column = 0
 
 var anim
 

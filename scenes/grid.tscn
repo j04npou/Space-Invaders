@@ -13,253 +13,308 @@ autostart = true
 
 [node name="enemigos" parent="." instance=ExtResource( 2 )]
 position = Vector2( 83, 211 )
+column = 1
 
 [node name="enemigos2" parent="." instance=ExtResource( 2 )]
 position = Vector2( 126, 211 )
+column = 2
 
 [node name="enemigos3" parent="." instance=ExtResource( 2 )]
 position = Vector2( 169, 211 )
+column = 2
 
 [node name="enemigos8" parent="." instance=ExtResource( 2 )]
 position = Vector2( 513, 211 )
+column = 11
 
 [node name="enemigos9" parent="." instance=ExtResource( 2 )]
 position = Vector2( 470, 211 )
+column = 10
 
 [node name="enemigos10" parent="." instance=ExtResource( 2 )]
 position = Vector2( 427, 211 )
+column = 9
 
 [node name="enemigos11" parent="." instance=ExtResource( 2 )]
 position = Vector2( 384, 211 )
+column = 8
 
 [node name="enemigos12" parent="." instance=ExtResource( 2 )]
 position = Vector2( 341, 211 )
+column = 7
 
 [node name="enemigos13" parent="." instance=ExtResource( 2 )]
 position = Vector2( 298, 211 )
+column = 6
 
 [node name="enemigos14" parent="." instance=ExtResource( 2 )]
 position = Vector2( 255, 211 )
+column = 5
 
 [node name="enemigos15" parent="." instance=ExtResource( 2 )]
 position = Vector2( 212, 211 )
+column = 4
 
 [node name="enemigos4" parent="." instance=ExtResource( 2 )]
 position = Vector2( 83, 261 )
 alienType = 1
 row = 1
+column = 1
 
 [node name="enemigos5" parent="." instance=ExtResource( 2 )]
 position = Vector2( 126, 261 )
 alienType = 1
 row = 1
+column = 2
 
 [node name="enemigos6" parent="." instance=ExtResource( 2 )]
 position = Vector2( 169, 261 )
 alienType = 1
 row = 1
+column = 2
 
 [node name="enemigos16" parent="." instance=ExtResource( 2 )]
 position = Vector2( 513, 261 )
 alienType = 1
 row = 1
+column = 11
 
 [node name="enemigos17" parent="." instance=ExtResource( 2 )]
 position = Vector2( 470, 261 )
 alienType = 1
 row = 1
+column = 10
 
 [node name="enemigos18" parent="." instance=ExtResource( 2 )]
 position = Vector2( 427, 261 )
 alienType = 1
 row = 1
+column = 9
 
 [node name="enemigos19" parent="." instance=ExtResource( 2 )]
 position = Vector2( 384, 261 )
 alienType = 1
 row = 1
+column = 8
 
 [node name="enemigos20" parent="." instance=ExtResource( 2 )]
 position = Vector2( 341, 261 )
 alienType = 1
 row = 1
+column = 7
 
 [node name="enemigos21" parent="." instance=ExtResource( 2 )]
 position = Vector2( 298, 261 )
 alienType = 1
 row = 1
+column = 6
 
 [node name="enemigos22" parent="." instance=ExtResource( 2 )]
 position = Vector2( 255, 261 )
 alienType = 1
 row = 1
+column = 5
 
 [node name="enemigos23" parent="." instance=ExtResource( 2 )]
 position = Vector2( 212, 261 )
 alienType = 1
 row = 1
+column = 4
 
 [node name="enemigos7" parent="." instance=ExtResource( 2 )]
 position = Vector2( 83, 311 )
 alienType = 1
 row = 2
+column = 1
 
 [node name="enemigos24" parent="." instance=ExtResource( 2 )]
 position = Vector2( 126, 311 )
 alienType = 1
 row = 2
+column = 2
 
 [node name="enemigos25" parent="." instance=ExtResource( 2 )]
 position = Vector2( 169, 311 )
 alienType = 1
 row = 2
+column = 2
 
 [node name="enemigos26" parent="." instance=ExtResource( 2 )]
 position = Vector2( 513, 311 )
 alienType = 1
 row = 2
+column = 11
 
 [node name="enemigos27" parent="." instance=ExtResource( 2 )]
 position = Vector2( 470, 311 )
 alienType = 1
 row = 2
+column = 10
 
 [node name="enemigos28" parent="." instance=ExtResource( 2 )]
 position = Vector2( 427, 311 )
 alienType = 1
 row = 2
+column = 9
 
 [node name="enemigos29" parent="." instance=ExtResource( 2 )]
 position = Vector2( 384, 311 )
 alienType = 1
 row = 2
+column = 8
 
 [node name="enemigos30" parent="." instance=ExtResource( 2 )]
 position = Vector2( 341, 311 )
 alienType = 1
 row = 2
+column = 7
 
 [node name="enemigos31" parent="." instance=ExtResource( 2 )]
 position = Vector2( 298, 311 )
 alienType = 1
 row = 2
+column = 6
 
 [node name="enemigos32" parent="." instance=ExtResource( 2 )]
 position = Vector2( 255, 311 )
 alienType = 1
 row = 2
+column = 5
 
 [node name="enemigos33" parent="." instance=ExtResource( 2 )]
 position = Vector2( 212, 311 )
 alienType = 1
 row = 2
+column = 4
 
 [node name="enemigos34" parent="." instance=ExtResource( 2 )]
 position = Vector2( 83, 361 )
 alienType = 2
 row = 3
+column = 1
 
 [node name="enemigos35" parent="." instance=ExtResource( 2 )]
 position = Vector2( 126, 361 )
 alienType = 2
 row = 3
+column = 2
 
 [node name="enemigos36" parent="." instance=ExtResource( 2 )]
 position = Vector2( 169, 361 )
 alienType = 2
 row = 3
+column = 2
 
 [node name="enemigos37" parent="." instance=ExtResource( 2 )]
 position = Vector2( 513, 361 )
 alienType = 2
 row = 3
+column = 11
 
 [node name="enemigos38" parent="." instance=ExtResource( 2 )]
 position = Vector2( 470, 361 )
 alienType = 2
 row = 3
+column = 10
 
 [node name="enemigos39" parent="." instance=ExtResource( 2 )]
 position = Vector2( 427, 361 )
 alienType = 2
 row = 3
+column = 9
 
 [node name="enemigos40" parent="." instance=ExtResource( 2 )]
 position = Vector2( 384, 361 )
 alienType = 2
 row = 3
+column = 8
 
 [node name="enemigos41" parent="." instance=ExtResource( 2 )]
 position = Vector2( 341, 361 )
 alienType = 2
 row = 3
+column = 7
 
 [node name="enemigos42" parent="." instance=ExtResource( 2 )]
 position = Vector2( 298, 361 )
 alienType = 2
 row = 3
+column = 6
 
 [node name="enemigos43" parent="." instance=ExtResource( 2 )]
 position = Vector2( 255, 361 )
 alienType = 2
 row = 3
+column = 5
 
 [node name="enemigos44" parent="." instance=ExtResource( 2 )]
 position = Vector2( 212, 361 )
 alienType = 2
 row = 3
+column = 4
 
 [node name="enemigos45" parent="." instance=ExtResource( 2 )]
 position = Vector2( 83, 411 )
 alienType = 2
 row = 4
+column = 1
 
 [node name="enemigos46" parent="." instance=ExtResource( 2 )]
 position = Vector2( 126, 411 )
 alienType = 2
 row = 4
+column = 2
 
 [node name="enemigos47" parent="." instance=ExtResource( 2 )]
 position = Vector2( 169, 411 )
 alienType = 2
 row = 4
+column = 2
 
 [node name="enemigos48" parent="." instance=ExtResource( 2 )]
 position = Vector2( 513, 411 )
 alienType = 2
 row = 4
+column = 11
 
 [node name="enemigos49" parent="." instance=ExtResource( 2 )]
 position = Vector2( 470, 411 )
 alienType = 2
 row = 4
+column = 10
 
 [node name="enemigos50" parent="." instance=ExtResource( 2 )]
 position = Vector2( 427, 411 )
 alienType = 2
 row = 4
+column = 9
 
 [node name="enemigos51" parent="." instance=ExtResource( 2 )]
 position = Vector2( 384, 411 )
 alienType = 2
 row = 4
+column = 8
 
 [node name="enemigos52" parent="." instance=ExtResource( 2 )]
 position = Vector2( 341, 411 )
 alienType = 2
 row = 4
+column = 7
 
 [node name="enemigos53" parent="." instance=ExtResource( 2 )]
 position = Vector2( 298, 411 )
 alienType = 2
 row = 4
+column = 6
 
 [node name="enemigos54" parent="." instance=ExtResource( 2 )]
 position = Vector2( 255, 411 )
 alienType = 2
 row = 4
+column = 5
 
 [node name="enemigos55" parent="." instance=ExtResource( 2 )]
 position = Vector2( 212, 411 )
 alienType = 2
 row = 4
+column = 4
