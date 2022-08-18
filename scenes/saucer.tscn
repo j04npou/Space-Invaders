@@ -28,14 +28,15 @@ animations = [ {
 extents = Vector2( 21.5, 10 )
 
 [node name="saucer" type="Node2D"]
+modulate = Color( 0.658824, 0.411765, 0.662745, 1 )
 script = ExtResource( 2 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
-modulate = Color( 1, 0, 0, 1 )
 scale = Vector2( 2.7, 3 )
 frames = SubResource( 1 )
 
 [node name="saucer" type="KinematicBody2D" parent="."]
+visible = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="saucer"]
 position = Vector2( -0.5, 2 )

@@ -1,10 +1,9 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://reference_screenshoot.png" type="Texture" id=1]
 [ext_resource path="res://scenes/grid.tscn" type="PackedScene" id=2]
 [ext_resource path="res://scenes/canon.tscn" type="PackedScene" id=3]
 [ext_resource path="res://scenes/saucer.tscn" type="PackedScene" id=4]
-[ext_resource path="res://scenes/background.tscn" type="PackedScene" id=5]
 [ext_resource path="res://scenes/texts.tscn" type="PackedScene" id=6]
 [ext_resource path="res://scenes/bunker.tscn" type="PackedScene" id=7]
 [ext_resource path="res://scenes/enemy_bullet.tscn" type="PackedScene" id=8]
@@ -17,13 +16,12 @@ blend_mode = 3
 script = ExtResource( 9 )
 
 [node name="ColorRect" type="ColorRect" parent="."]
+visible = false
 margin_left = -12.0
 margin_top = -15.0
 margin_right = 615.0
 margin_bottom = 813.0
 color = Color( 0, 0, 0, 1 )
-
-[node name="background" parent="." instance=ExtResource( 5 )]
 
 [node name="canon" parent="." instance=ExtResource( 3 )]
 position = Vector2( 50, 680 )

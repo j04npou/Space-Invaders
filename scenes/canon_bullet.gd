@@ -13,9 +13,9 @@ func _process(delta):
 		speed = 0
 		$AnimatedSprite.play("explosion")
 	if position.y > 570:
-		modulate = Color(0,1,0,1)
+		modulate = $"/root/PlayerVariables".green
 	else:
-		modulate = Color(1,1,1,1)
+		modulate = $"/root/PlayerVariables".blue
 
 func _on_Area2D_body_entered(body):
 #	print(body.name)
@@ -27,7 +27,7 @@ func _on_Area2D_body_entered(body):
 	if "alien" in body.name:
 		$AnimatedSprite.visible = false
 	if position.y > 570:
-		modulate = Color(0,1,0,1)
+		modulate = $"/root/PlayerVariables".green
 
 func _on_AnimatedSprite_animation_finished():
 	emit_signal("bulletReady")

@@ -64,7 +64,7 @@ func _process(delta):
 		speed = 0
 		explode()
 	if position.y > 570:
-		modulate = Color(0,1,0,1)
+		modulate = $"/root/PlayerVariables".green
 	else:
 		modulate = Color(1,1,1,1)
 

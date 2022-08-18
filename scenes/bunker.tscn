@@ -4,7 +4,7 @@
 [ext_resource path="res://scenes/bunker/bunker_bloque.tscn" type="PackedScene" id=5]
 
 [node name="bunker_4x4" type="Node2D"]
-modulate = Color( 0, 1, 0, 1 )
+modulate = Color( 0, 0.866667, 0.298039, 1 )
 scale = Vector2( 0.75, 0.8 )
 
 [node name="bunker_bloque" parent="." instance=ExtResource( 5 )]

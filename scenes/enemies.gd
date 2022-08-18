@@ -34,7 +34,7 @@ func changeFrame():
 		anim.frame = 0
 		
 	if position.y > 570:
-		anim.modulate = Color(0,1,0,1)
+		anim.modulate = $"/root/PlayerVariables".green
 	
 func die():
 	anim.animation = "death"

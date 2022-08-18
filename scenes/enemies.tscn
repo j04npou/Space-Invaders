@@ -82,6 +82,7 @@ animations = [ {
 extents = Vector2( 16, 11 )
 
 [node name="enemigos" type="Node2D"]
+modulate = Color( 0.65098, 0.886275, 1, 1 )
 script = ExtResource( 1 )
 
 [node name="calamar" type="AnimatedSprite" parent="."]
@@ -102,6 +103,7 @@ frames = SubResource( 12 )
 input_pickable = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="alien"]
+visible = false
 position = Vector2( -1, 2 )
 shape = SubResource( 13 )
 

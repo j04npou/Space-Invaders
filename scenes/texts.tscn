@@ -105,7 +105,7 @@ text = "CREDITS 08"
 valign = 2
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
-modulate = Color( 0, 1, 0, 1 )
+modulate = Color( 0, 0.866667, 0.298039, 1 )
 position = Vector2( 88, 729 )
 scale = Vector2( 2.7, 3 )
 frames = SubResource( 5 )
