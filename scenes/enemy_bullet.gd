@@ -83,6 +83,16 @@ func explode():
 	steps = 0
 	$Timer.start()
 	anim.play("explosion")
+	
+func disable_bullet():
+	set_process(false)
+	anim.visible = false
+	$Area2D.collision_layer=0
+	$Area2D.collision_mask=0
+	speed = 0
+	steps = 0
+	
+	active = false
 
 func shot():
 	var enemy = null

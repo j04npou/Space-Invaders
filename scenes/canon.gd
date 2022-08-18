@@ -2,20 +2,11 @@ extends Node2D
 
 var speed = 170
 var isBulletReady = true
-signal shot
+signal shot #connect to saucer to change direction based on number of fires
+signal canonHit #connect to game to control global death animation
 
-# Declare member variables here. Examples:
-# var a = 2
-# var b = "text"
-
-
-# Called when the node enters the scene tree for the first time.
-#func _ready():
-#	pass # Replace with function body.
-
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
+	visible=true
 	if Input.is_action_pressed("ui_left"):
 		position.x -= speed * delta
 	elif Input.is_action_pressed("ui_right"):
@@ -37,3 +28,18 @@ func _process(delta):
 
 func _on_bulletReady():
 	isBulletReady = true
+	
+func die():
+	$Canon.collision_layer = 0
+	$Canon.collision_mask = 0
+	$AnimatedSprite.play("death")
+	emit_signal("canonHit")
+
+func _on_AnimatedSprite_animation_finished():
+	$AnimatedSprite.animation = "default"
+	visible = false
+	position.x = 60
+	$Canon.collision_layer = 1
+	$Canon.collision_mask = 1
+	$AnimatedSprite.stop()
+	set_process(false)

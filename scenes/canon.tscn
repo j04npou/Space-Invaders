@@ -39,8 +39,10 @@ modulate = Color( 0, 1, 0, 1 )
 scale = Vector2( 2.7, 3 )
 frames = SubResource( 6 )
 
-[node name="KinematicBody2D" type="KinematicBody2D" parent="."]
+[node name="Canon" type="KinematicBody2D" parent="."]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="KinematicBody2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Canon"]
 position = Vector2( 0, 2.5 )
 shape = SubResource( 5 )
+
+[connection signal="animation_finished" from="AnimatedSprite" to="." method="_on_AnimatedSprite_animation_finished"]
