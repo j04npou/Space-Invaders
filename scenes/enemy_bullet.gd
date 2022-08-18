@@ -34,16 +34,15 @@ func _process(delta):
 			if playerScore > pointsTable[i]:
 				stepsToFire = stepsTable[i]
 		
-		var stepMin = 40
+		var stepMin = stepsToFire * 10
 		
 		for i in get_tree().get_nodes_in_group("enemyBullets"):
 			if i.active:
 				if i.steps < stepMin:
 					stepMin = i.steps
 
-		if stepMin > stepsToFire:
-			active = true
-			anim.visible = true
+		if stepMin  >= stepsToFire * 10:
+			shot()
 		else:
 			return
 		
@@ -74,12 +73,17 @@ func explota():
 	steps = 0
 	$Timer.start()
 	anim.play("explosion")
-	active = false
 
-func _on_Timer_timeout():
+func shot():
+	active = true
+	anim.visible = true
 	speed = speed_value
-	position.y = 350
-	position.x = rng.randi_range(260, 350)
+	position.y = 450
+	position.x = rng.randi_range(65, 550)
 	anim.play("default")
 	$Area2D.collision_layer=1
 	$Area2D.collision_mask=1
+
+func _on_Timer_timeout():
+	anim.visible = false
+	active = false

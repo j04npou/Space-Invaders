@@ -4,6 +4,9 @@ signal bulletReady
 
 var speed = 700
 
+func _ready():
+	$AnimatedSprite.animation = "default"
+
 func _process(delta):
 	position.y -= speed * delta
 	if position.y < 120:

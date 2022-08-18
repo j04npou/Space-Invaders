@@ -74,7 +74,15 @@ position = Vector2( 328, 591 )
 position = Vector2( 449, 591 )
 
 [node name="Bullet" parent="." instance=ExtResource( 8 )]
-position = Vector2( 114, 449 )
+position = Vector2( -17, 444 )
+bulletType = 1
+
+[node name="Bullet2" parent="." instance=ExtResource( 8 )]
+position = Vector2( 625, 440 )
+bulletType = 2
+
+[node name="Bullet3" parent="." instance=ExtResource( 8 )]
+position = Vector2( 623, 408 )
 
 [connection signal="shot" from="canon" to="saucer" method="_on_canon_shot"]
 [connection signal="saucercall" from="grid" to="saucer" method="_on_grid_saucercall"]
