@@ -21,6 +21,8 @@ func _process(delta):
 	elif Input.is_action_pressed("ui_right"):
 		position.x += speed * delta
 		
+	$"/root/PlayerVariables".canonX = position.x
+		
 	if Input.is_action_pressed("ui_accept") and isBulletReady:
 		isBulletReady = false
 		var bullet = preload("res://scenes/canon_bullet.tscn").instance()

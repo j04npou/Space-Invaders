@@ -15,6 +15,10 @@ run/main_scene="res://scenes/game.tscn"
 run/low_processor_mode=true
 config/icon="res://icon.png"
 
+[autoload]
+
+PlayerVariables="*res://player_variables.gd"
+
 [display]
 
 window/size/width=600

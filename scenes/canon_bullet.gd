@@ -12,6 +12,10 @@ func _process(delta):
 	if position.y < 120:
 		speed = 0
 		$AnimatedSprite.play("explosion")
+	if position.y > 570:
+		modulate = Color(0,1,0,1)
+	else:
+		modulate = Color(1,1,1,1)
 
 func _on_Area2D_body_entered(body):
 #	print(body.name)

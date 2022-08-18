@@ -74,7 +74,7 @@ position = Vector2( 328, 591 )
 position = Vector2( 449, 591 )
 
 [node name="Bullet" parent="." instance=ExtResource( 8 )]
-position = Vector2( -17, 444 )
+position = Vector2( 623, 472 )
 bulletType = 1
 
 [node name="Bullet2" parent="." instance=ExtResource( 8 )]
