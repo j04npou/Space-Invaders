@@ -5,7 +5,7 @@
 [ext_resource path="res://art/space_invaders_midway_backdrop.png" type="Texture" id=3]
 [ext_resource path="res://art/space_invaders_midway_moon.png" type="Texture" id=4]
 [ext_resource path="res://scenes/background.tscn" type="PackedScene" id=5]
-[ext_resource path="res://scenes/decorations.gd" type="Script" id=6]
+[ext_resource path="res://scenes/decorated_game.gd" type="Script" id=6]
 
 [node name="decorations" type="Node2D"]
 position = Vector2( 289, -2 )

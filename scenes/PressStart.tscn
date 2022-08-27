@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://scenes/PressStart.gd" type="Script" id=1]
+[ext_resource path="res://art/press_start.png" type="Texture" id=2]
+
+[node name="PressStart" type="Node2D"]
+script = ExtResource( 1 )
+
+[node name="PressStartImage" type="TextureRect" parent="."]
+margin_left = -480.0
+margin_top = -172.0
+margin_right = 481.0
+margin_bottom = 173.0
+texture = ExtResource( 2 )
+expand = true
+stretch_mode = 6

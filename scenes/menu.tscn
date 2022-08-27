@@ -1,0 +1,82 @@
+[gd_scene load_steps=10 format=2]
+
+[ext_resource path="res://art/Space_Invaders_Taito_Markee.png" type="Texture" id=1]
+[ext_resource path="res://art/white.png" type="Texture" id=2]
+[ext_resource path="res://art/space_invaders_midway_backdrop.png" type="Texture" id=3]
+[ext_resource path="res://art/space_invaders_midway_moon.png" type="Texture" id=4]
+[ext_resource path="res://scenes/background.tscn" type="PackedScene" id=5]
+[ext_resource path="res://shaders/CRTeffect.gdshader" type="Shader" id=6]
+[ext_resource path="res://scenes/PressStart.tscn" type="PackedScene" id=7]
+[ext_resource path="res://scenes/menu.gd" type="Script" id=8]
+
+[sub_resource type="ShaderMaterial" id=3]
+shader = ExtResource( 6 )
+shader_param/overlay = true
+shader_param/scanlines_opacity = 0.117
+shader_param/scanlines_width = 0.25
+shader_param/grille_opacity = 0.07
+shader_param/resolution = Vector2( 640, 480 )
+shader_param/pixelate = false
+shader_param/roll = true
+shader_param/roll_speed = 2.0
+shader_param/roll_size = 7.92
+shader_param/roll_variation = 2.658
+shader_param/distort_intensity = 0.011
+shader_param/noise_opacity = 0.115
+shader_param/noise_speed = 5.0
+shader_param/static_noise_intensity = 0.06
+shader_param/aberration = 0.03
+shader_param/brightness = 0.8
+shader_param/discolor = false
+shader_param/warp_amount = 0.088
+shader_param/clip_warp = false
+shader_param/vignette_intensity = 0.4
+shader_param/vignette_opacity = 0.5
+
+[node name="menu" type="Node2D"]
+position = Vector2( 289, -2 )
+scale = Vector2( 0.53, 0.53 )
+script = ExtResource( 8 )
+
+[node name="space" type="TextureRect" parent="."]
+modulate = Color( 0.109804, 0.156863, 0.247059, 1 )
+margin_left = 145.0
+margin_top = 544.0
+margin_right = 1416.0
+margin_bottom = 1371.0
+texture = ExtResource( 3 )
+expand = true
+stretch_mode = 1
+
+[node name="background" parent="." instance=ExtResource( 5 )]
+modulate = Color( 1, 1, 1, 0.462745 )
+position = Vector2( 100, 536 )
+scale = Vector2( 1.4, 1.4 )
+
+[node name="moon" type="TextureRect" parent="."]
+modulate = Color( 0.54902, 0.592157, 0.67451, 1 )
+margin_left = 136.0
+margin_top = 1072.0
+margin_right = 1434.0
+margin_bottom = 1366.0
+texture = ExtResource( 4 )
+expand = true
+stretch_mode = 1
+
+[node name="markee" type="TextureRect" parent="."]
+margin_right = 1562.0
+margin_bottom = 1515.0
+texture = ExtResource( 1 )
+expand = true
+stretch_mode = 5
+
+[node name="CRTeffet" type="TextureRect" parent="."]
+material = SubResource( 3 )
+margin_left = -43.0
+margin_right = 1587.0
+margin_bottom = 1519.0
+texture = ExtResource( 2 )
+expand = true
+
+[node name="PressStart" parent="." instance=ExtResource( 7 )]
+position = Vector2( 784.906, 900 )
