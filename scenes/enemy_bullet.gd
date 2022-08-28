@@ -5,8 +5,8 @@ export var bulletType = 0
 var columnTable = [ [1,7,1,1,1,4,11,1,6,3,1,1,11,9,2,8] , [4,11,1,6,3,1,1,11,9,2,8,2,11,4,7,10] ]
 var lastColumnShot = 0
 var rng = RandomNumberGenerator.new()
-var speed = 200
-var speed_value = 200
+var speed = 250
+var speed_value = 250
 var anim
 var active = false
 var steps = 0
@@ -73,12 +73,12 @@ func _on_Area2D_body_entered(body):
 	explode()
 
 func _on_Area2D_area_entered(area):
-	print("area "+ area.name)
-#	queue_free()
+	area.get_parent()._on_AnimatedSprite_animation_finished()
+	explode()
 
 func explode():
-	$Area2D.collision_layer=0
-	$Area2D.collision_mask=0
+	$EnemyBullet.collision_layer=0
+	$EnemyBullet.collision_mask=0
 	speed = 0
 	steps = 0
 	$Timer.start()
@@ -87,8 +87,8 @@ func explode():
 func disable_bullet():
 	set_process(false)
 	anim.visible = false
-	$Area2D.collision_layer=0
-	$Area2D.collision_mask=0
+	$EnemyBullet.collision_layer=0
+	$EnemyBullet.collision_mask=0
 	speed = 0
 	steps = 0
 	
@@ -127,8 +127,8 @@ func shot():
 		position.y = enemy.position.y +25
 		position.x = enemy.position.x
 		anim.play("default")
-		$Area2D.collision_layer=1
-		$Area2D.collision_mask=1
+		$EnemyBullet.collision_layer=1
+		$EnemyBullet.collision_mask=1
 
 func _on_Timer_timeout():
 	anim.visible = false

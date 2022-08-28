@@ -72,9 +72,9 @@ frames = SubResource( 5 )
 centered = false
 script = ExtResource( 2 )
 
-[node name="StaticBody2D" type="StaticBody2D" parent="."]
+[node name="Bunker" type="StaticBody2D" parent="."]
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D"]
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Bunker"]
 visible = false
 position = Vector2( -8, -11 )
 polygon = PoolVector2Array( 8, 19, 16, 19, 16, 11, 8, 11 )

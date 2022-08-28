@@ -19,8 +19,8 @@ func _process(delta):
 
 func _on_Area2D_body_entered(body):
 #	print(body.name)
-	$Area2D.collision_layer = 0
-	$Area2D.collision_mask = 0
+	$CanonBullet.collision_layer = 0
+	$CanonBullet.collision_mask = 0
 	body.get_parent().die()
 	$AnimatedSprite.play("explosion")
 	speed = 0

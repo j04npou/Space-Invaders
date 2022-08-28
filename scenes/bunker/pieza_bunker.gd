@@ -20,8 +20,8 @@ func rompe(rotura):
 
 	if frame + rotura > 2:
 		visible = false
-		$StaticBody2D.collision_layer = 0
-		$StaticBody2D.collision_mask = 0
+		$Bunker.collision_layer = 0
+		$Bunker.collision_mask = 0
 		$Timer.start()
 	else:
 		frame = frame + rotura
