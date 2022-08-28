@@ -6,7 +6,7 @@
 [ext_resource path="res://art/space_invaders_midway_moon.png" type="Texture" id=4]
 [ext_resource path="res://scenes/background.tscn" type="PackedScene" id=5]
 [ext_resource path="res://shaders/CRTeffect.gdshader" type="Shader" id=6]
-[ext_resource path="res://scenes/PressStart.tscn" type="PackedScene" id=7]
+[ext_resource path="res://scenes/press_start.tscn" type="PackedScene" id=7]
 [ext_resource path="res://scenes/menu.gd" type="Script" id=8]
 
 [sub_resource type="ShaderMaterial" id=3]

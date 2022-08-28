@@ -1,6 +1,7 @@
 extends Node2D
 
 signal dead
+signal points
 
 export var alienType = 0
 export var row = 0
@@ -26,6 +27,8 @@ func _ready():
 		$cangrejo.visible = false
 		$medusa.visible = true
 		anim = $medusa
+	
+	connect("points", $"../../texts", "_on_points")
 		
 func changeFrame():
 	if anim.frame == 0:
@@ -41,6 +44,7 @@ func die():
 	$alien.collision_layer = 0
 	$alien.collision_mask = 0
 	anim.play()
+	emit_signal("points", 30 - alienType * 10)
 
 func _on_animation_finished():
 	emit_signal("dead")
