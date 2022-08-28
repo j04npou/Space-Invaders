@@ -1,5 +1,7 @@
 extends Node2D
+
 var tween
+var firePressed = false
 
 func _ready():
 	tween = get_tree().create_tween()
@@ -9,8 +11,9 @@ func _ready():
 	tween.tween_property(self, "scale", Vector2(2.7,2.7), 1)
 
 func _unhandled_input(_event):
-	if Input.is_action_just_released("ui_accept"):
+	if Input.is_action_just_released("ui_accept") and !firePressed:
 		tween.kill()
 		var tween2 = get_tree().create_tween().set_ease(Tween.EASE_OUT).set_trans(Tween.TRANS_QUINT)
 		tween2.tween_property(self, "modulate", Color(1,1,1,0), 0.5)
+		firePressed = true
 

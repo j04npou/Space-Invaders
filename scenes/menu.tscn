@@ -80,3 +80,9 @@ expand = true
 
 [node name="PressStart" parent="." instance=ExtResource( 7 )]
 position = Vector2( 784.906, 900 )
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 0.5
+one_shot = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
