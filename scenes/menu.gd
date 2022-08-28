@@ -1,6 +1,6 @@
 extends Node2D
 
-func _unhandled_input(event):
+func _unhandled_input(_event):
 	if Input.is_action_just_released("ui_accept"):
 		var tween = get_tree().create_tween()
 		tween.set_parallel(true)
@@ -11,4 +11,4 @@ func _unhandled_input(event):
 		tween.tween_callback(self, "startGame", [])
 
 func startGame():
-	get_tree().change_scene("res://scenes/decorated_game.tscn")
+	var _none = get_tree().change_scene("res://scenes/decorated_game.tscn")
