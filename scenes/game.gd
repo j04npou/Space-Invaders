@@ -24,11 +24,9 @@ func substract_lives():
 		lives -= 1
 		$texts.update_lives(lives)
 	else:
-		game_over()
+		print("GAME OVER")
+		$GameOver.gameOver()
 		
-func game_over():
-	print("GAME OVER")
-
 func _on_Respawn_timer_timeout():
 	$grid.set_process(true)
 	$canon.set_process(true)
