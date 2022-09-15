@@ -95,4 +95,5 @@ pause_mode = 2
 [connection signal="canonHit" from="canon" to="." method="_on_canon_canonHit"]
 [connection signal="shot" from="canon" to="saucer" method="_on_canon_shot"]
 [connection signal="saucercall" from="grid" to="saucer" method="_on_grid_saucercall"]
+[connection signal="points" from="saucer" to="texts" method="_on_points"]
 [connection signal="timeout" from="Respawn_timer" to="." method="_on_Respawn_timer_timeout"]
