@@ -106,8 +106,20 @@ custom_fonts/font = SubResource( 1 )
 text = "CREDITS 08"
 valign = 2
 
-[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+[node name="lives_draw1" type="AnimatedSprite" parent="."]
 modulate = Color( 0, 0.866667, 0.298039, 1 )
 position = Vector2( 88, 729 )
+scale = Vector2( 2.7, 3 )
+frames = SubResource( 5 )
+
+[node name="lives_draw2" type="AnimatedSprite" parent="."]
+modulate = Color( 0, 0.866667, 0.298039, 1 )
+position = Vector2( 130, 729 )
+scale = Vector2( 2.7, 3 )
+frames = SubResource( 5 )
+
+[node name="lives_draw3" type="AnimatedSprite" parent="."]
+modulate = Color( 0, 0.866667, 0.298039, 1 )
+position = Vector2( 172, 729 )
 scale = Vector2( 2.7, 3 )
 frames = SubResource( 5 )

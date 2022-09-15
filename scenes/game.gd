@@ -1,5 +1,7 @@
 extends Node2D
 
+var lives = 3
+
 func _ready():
 	stop_all_processes()
 	var tween = create_tween().set_ease(Tween.EASE_IN).set_trans(Tween.TRANS_CUBIC)
@@ -15,7 +17,17 @@ func stop_all_processes():
 
 func _on_canon_canonHit():
 	stop_all_processes()
-#	restar vidas
+	substract_lives()
+
+func substract_lives():
+	if lives > 0:
+		lives -= 1
+		$texts.update_lives(lives)
+	else:
+		game_over()
+		
+func game_over():
+	print("GAME OVER")
 
 func _on_Respawn_timer_timeout():
 	$grid.set_process(true)
