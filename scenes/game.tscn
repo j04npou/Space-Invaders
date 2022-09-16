@@ -96,8 +96,12 @@ pause_mode = 2
 [node name="GameOver" parent="." instance=ExtResource( 10 )]
 visible = false
 
+[node name="levelUpTimer" type="Timer" parent="."]
+one_shot = true
+
 [connection signal="canonHit" from="canon" to="." method="_on_canon_canonHit"]
 [connection signal="shot" from="canon" to="saucer" method="_on_canon_shot"]
-[connection signal="saucercall" from="grid" to="saucer" method="_on_grid_saucercall"]
+[connection signal="extra_live" from="texts" to="." method="_on_texts_extra_live"]
 [connection signal="points" from="saucer" to="texts" method="_on_points"]
 [connection signal="timeout" from="Respawn_timer" to="." method="_on_Respawn_timer_timeout"]
+[connection signal="timeout" from="levelUpTimer" to="." method="_on_levelUpTimer_timeout"]

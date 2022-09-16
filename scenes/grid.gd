@@ -1,6 +1,9 @@
 extends Node2D
 
 signal saucercall
+signal game_over
+signal level_up
+
 var timeBetweenMoves = 160
 var lastMoveTime = OS.get_system_time_msecs()
 var currentRow = 0
@@ -13,6 +16,11 @@ var emptyRows = []
 var xmax = 0
 var xmin = 600
 var ymax = 0
+
+func _ready():
+	var _void1 = connect("game_over", $"../GameOver", "_gameOver")
+	var _void2 = connect("saucercall", $"../saucer", "_on_grid_saucercall")
+	var _void3 = connect("level_up", $"../../game", "_on_grid_level_up")
 
 func row_change():
 	currentRow -= 1
@@ -31,6 +39,12 @@ func row_change():
 			saucer_called = true
 
 func _process(_delta):
+	if emptyRows.size() >= 5:
+		emit_signal("level_up")
+		set_process(false)
+		emptyRows = []
+		return
+	
 	if OS.get_system_time_msecs() - lastMoveTime < timeBetweenMoves:
 		return
 	else:
@@ -70,4 +84,7 @@ func _process(_delta):
 			
 	if enemiesInRow == 0:
 		emptyRows.append(currentRow)
+		
+	if ymax >= 670:
+		emit_signal("game_over")
 

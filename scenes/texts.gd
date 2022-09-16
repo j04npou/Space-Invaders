@@ -1,12 +1,14 @@
 extends Node2D
 
+signal extra_live
+
 var score = 0
+var extra_live_added = false
 
 func _ready():
 	update_lives(3)
 
-func _on_points(points):
-	print(points)
+func _on_points(points):	
 	score += points
 	var tmpScore = str(score)
 	while tmpScore.length() < 4:
@@ -16,6 +18,10 @@ func _on_points(points):
 	if score > $"/root/PlayerVariables".hiscore:
 		$"/root/PlayerVariables".hiscore = score
 		$hiscore.text = tmpScore
+		
+	if score > 1500 and !extra_live_added:
+		emit_signal("extra_live")
+		extra_live_added = true
 
 func update_lives(lives):
 	$lives.text = str(lives)

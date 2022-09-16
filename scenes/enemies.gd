@@ -28,7 +28,7 @@ func _ready():
 		$medusa.visible = true
 		anim = $medusa
 	
-	connect("points", $"../../texts", "_on_points")
+	var _void = connect("points", $"../../texts", "_on_points")
 		
 func changeFrame():
 	if anim.frame == 0:
