@@ -8,6 +8,10 @@ var extra_live_added = false
 
 func _ready():
 	update_lives(3)
+	var tmpScore = str($"/root/PlayerVariables".hiscore)
+	while tmpScore.length() < 4:
+		tmpScore = "0" + tmpScore
+	$hiscore.text = tmpScore
 
 func _on_points(points):
 	score += points
