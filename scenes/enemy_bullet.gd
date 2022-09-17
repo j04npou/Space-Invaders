@@ -134,3 +134,7 @@ func _on_Timer_timeout():
 	anim.visible = false
 	active = false
 #	$"/root/PlayerVariables".turn = 0
+
+
+func _on_texts_points_update(score):
+	playerScore = score

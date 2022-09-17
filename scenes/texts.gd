@@ -1,6 +1,7 @@
 extends Node2D
 
 signal extra_live
+signal points_update
 
 var score = 0
 var extra_live_added = false
@@ -8,7 +9,7 @@ var extra_live_added = false
 func _ready():
 	update_lives(3)
 
-func _on_points(points):	
+func _on_points(points):
 	score += points
 	var tmpScore = str(score)
 	while tmpScore.length() < 4:
@@ -22,6 +23,8 @@ func _on_points(points):
 	if score > 1500 and !extra_live_added:
 		emit_signal("extra_live")
 		extra_live_added = true
+		
+	emit_signal("points_update",score)
 
 func update_lives(lives):
 	$lives.text = str(lives)

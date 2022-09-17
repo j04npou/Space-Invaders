@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=2]
+[gd_scene load_steps=13 format=2]
 
 [ext_resource path="res://reference_screenshoot.png" type="Texture" id=1]
 [ext_resource path="res://scenes/grid.tscn" type="PackedScene" id=2]
@@ -10,6 +10,7 @@
 [ext_resource path="res://scenes/enemy_bullet.tscn" type="PackedScene" id=8]
 [ext_resource path="res://scenes/game.gd" type="Script" id=9]
 [ext_resource path="res://scenes/game_over.tscn" type="PackedScene" id=10]
+[ext_resource path="res://sounds/extralive.wav" type="AudioStream" id=11]
 
 [sub_resource type="CanvasItemMaterial" id=1]
 blend_mode = 3
@@ -99,9 +100,15 @@ visible = false
 [node name="levelUpTimer" type="Timer" parent="."]
 one_shot = true
 
+[node name="AudioStream_ExtraLive" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 11 )
+
 [connection signal="canonHit" from="canon" to="." method="_on_canon_canonHit"]
 [connection signal="shot" from="canon" to="saucer" method="_on_canon_shot"]
 [connection signal="extra_live" from="texts" to="." method="_on_texts_extra_live"]
+[connection signal="points_update" from="texts" to="Bullet0" method="_on_texts_points_update"]
+[connection signal="points_update" from="texts" to="Bullet1" method="_on_texts_points_update"]
+[connection signal="points_update" from="texts" to="Bullet2" method="_on_texts_points_update"]
 [connection signal="points" from="saucer" to="texts" method="_on_points"]
 [connection signal="timeout" from="Respawn_timer" to="." method="_on_Respawn_timer_timeout"]
 [connection signal="timeout" from="levelUpTimer" to="." method="_on_levelUpTimer_timeout"]

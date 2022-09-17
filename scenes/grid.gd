@@ -16,13 +16,17 @@ var emptyRows = []
 var xmax = 0
 var xmin = 600
 var ymax = 0
+var march_index = 0
 
 func _ready():
-	var _void1 = connect("game_over", $"../GameOver", "_gameOver")
+	var _void1 = connect("game_over", $"../../game", "_on_gameOver")
 	var _void2 = connect("saucercall", $"../saucer", "_on_grid_saucercall")
 	var _void3 = connect("level_up", $"../../game", "_on_grid_level_up")
 
 func row_change():
+	if currentRow == 4:
+		play_march_sound()
+	
 	currentRow -= 1
 	if currentRow < 0:
 		currentRow = 4
@@ -37,6 +41,22 @@ func row_change():
 		if ymax > yStartSaucer and !saucer_called:
 			emit_signal("saucercall")
 			saucer_called = true
+
+func play_march_sound():
+	match march_index:
+		0:
+			$AudioStream1.play()
+		1:
+			$AudioStream2.play()
+		2:
+			$AudioStream3.play()
+		3:
+			$AudioStream4.play()
+			
+	march_index += 1
+	
+	if march_index > 3:
+		march_index = 0
 
 func _process(_delta):
 	if emptyRows.size() >= 5:

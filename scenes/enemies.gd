@@ -40,6 +40,7 @@ func changeFrame():
 		anim.modulate = $"/root/PlayerVariables".green
 	
 func die():
+	$AudioStreamPlayer.play()
 	anim.animation = "death"
 	$alien.collision_layer = 0
 	$alien.collision_mask = 0

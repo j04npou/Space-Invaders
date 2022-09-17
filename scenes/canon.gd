@@ -30,6 +30,7 @@ func _on_bulletReady():
 	isBulletReady = true
 	
 func die():
+	$AudioStreamPlayer.play()
 	$Canon.collision_layer = 0
 	$Canon.collision_mask = 0
 	$AnimatedSprite.play("death")

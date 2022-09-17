@@ -11,7 +11,7 @@ func startGame():
 	var _none = get_tree().change_scene("res://scenes/decorated_game.tscn")
 
 func _on_Timer_timeout():
-	var tween = get_tree().create_tween()
+	var tween = get_tree().create_tween().set_ease(Tween.EASE_IN_OUT).set_trans(Tween.TRANS_CUBIC)
 	tween.set_parallel(true)
 	tween.tween_property(self, "scale", Vector2(1,1), 2)
 	tween.tween_property(self, "position", Vector2(-76,-540), 2)

@@ -1,7 +1,11 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=7 format=2]
 
+[ext_resource path="res://sounds/1.wav" type="AudioStream" id=1]
 [ext_resource path="res://scenes/enemies.tscn" type="PackedScene" id=2]
 [ext_resource path="res://scenes/grid.gd" type="Script" id=3]
+[ext_resource path="res://sounds/2.wav" type="AudioStream" id=4]
+[ext_resource path="res://sounds/4.wav" type="AudioStream" id=5]
+[ext_resource path="res://sounds/3.wav" type="AudioStream" id=6]
 
 [node name="grid" type="Node2D"]
 script = ExtResource( 3 )
@@ -318,3 +322,15 @@ position = Vector2( 212, 411 )
 alienType = 2
 row = 4
 column = 4
+
+[node name="AudioStream1" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 1 )
+
+[node name="AudioStream2" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 4 )
+
+[node name="AudioStream3" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 6 )
+
+[node name="AudioStream4" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 5 )

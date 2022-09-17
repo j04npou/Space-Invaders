@@ -17,6 +17,7 @@ func _process(delta):
 		return
 	position.x += direction * speed * delta
 	if position.x < -25 or position.x > 625:
+		$AudioStream_saucer.stop()
 		var tween = get_tree().create_tween()
 		tween.tween_property($AnimatedSprite, "modulate", Color(1,1,1,0), 0.2)
 	if position.x < -70 or position.x > 670:
@@ -25,6 +26,8 @@ func _process(delta):
 
 func die():
 	$AnimatedSprite.animation = "death"
+	$AudioStream_saucer.stop()
+	$AudioStream_death.play()
 	$saucer.collision_layer = 0
 	$saucer.collision_mask = 0
 	$AnimatedSprite.play()
@@ -43,12 +46,14 @@ func _on_PointsTimer_timeout():
 	visible = false
 
 func _on_Timer_timeout():
-	activate()
+	if get_tree().get_nodes_in_group("enemies").size() >= 8:
+		activate()
 	
 # warning-ignore:function_conflicts_variable
 func activate():
 	active = true
 	visible = true
+	$AudioStream_saucer.play()
 	$AnimatedSprite.animation = "default"
 	$saucer.collision_layer = 1
 	$saucer.collision_mask = 1
