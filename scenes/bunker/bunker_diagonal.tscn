@@ -69,16 +69,17 @@ animations = [ {
 [node name="bunker_diagonal" type="AnimatedSprite"]
 scale = Vector2( 2, 2 )
 frames = SubResource( 5 )
-animation = "roto3"
 centered = false
 script = ExtResource( 2 )
 
 [node name="Bunker" type="StaticBody2D" parent="."]
+collision_layer = 5
+collision_mask = 5
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Bunker"]
 visible = false
 position = Vector2( -8, -11 )
-polygon = PoolVector2Array( 8, 19, 12, 15, 16, 11, 8, 11 )
+polygon = PoolVector2Array( 8, 15, 12, 11, 12, 15 )
 
 [node name="Timer" type="Timer" parent="."]
 wait_time = 0.1

@@ -29,43 +29,35 @@ position = Vector2( 56, 0 )
 
 [node name="bunker_techo_dcha" parent="." instance=ExtResource( 4 )]
 position = Vector2( 64, 0 )
-animation = "default"
 flip_h = true
 
 [node name="bunker_techo_dcha2" parent="." instance=ExtResource( 4 )]
 position = Vector2( 72, 8 )
-animation = "default"
 flip_h = true
 
 [node name="bunker_puerta_dcha" parent="." instance=ExtResource( 4 )]
 position = Vector2( 48, 40 )
-animation = "default"
 flip_v = true
 
 [node name="bunker_puerta_dcha2" parent="." instance=ExtResource( 4 )]
 position = Vector2( 56, 48 )
-animation = "default"
 flip_v = true
 
 [node name="bunker_puerta_izda" parent="." instance=ExtResource( 4 )]
 position = Vector2( 24, 40 )
-animation = "default"
 flip_h = true
 flip_v = true
 
 [node name="bunker_puerta_izda2" parent="." instance=ExtResource( 4 )]
 position = Vector2( 16, 48 )
-animation = "default"
 flip_h = true
 flip_v = true
 
 [node name="bunker_techo_izda" parent="." instance=ExtResource( 4 )]
 position = Vector2( 8, 0 )
-animation = "default"
 
 [node name="bunker_techo_izda2" parent="." instance=ExtResource( 4 )]
 position = Vector2( 0, 8 )
-animation = "default"
 
 [node name="bunker_bloque8" parent="." instance=ExtResource( 5 )]
 position = Vector2( 16, 8 )
