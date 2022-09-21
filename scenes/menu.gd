@@ -6,6 +6,7 @@ func _unhandled_input(_event):
 	if Input.is_action_just_released("ui_accept") and !firePressed:
 		$Timer.start()
 		firePressed = true
+		$fullScreenButton.visible = false
 
 func startGame():
 	var _none = get_tree().change_scene("res://scenes/decorated_game.tscn")
