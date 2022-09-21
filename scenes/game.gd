@@ -2,6 +2,7 @@ extends Node2D
 
 var lives = 3
 var level = 0
+var stage = 1
 var grid_height = [0,2,4,5,5,5,6,6,6]
 
 func init_grid_height():
@@ -54,6 +55,9 @@ func _on_grid_level_up():
 	level += 1
 	if level > 8:
 		level = 1
+		
+	stage += 1
+	$texts.update_stage(stage)
 		
 	print("LEVEL UP" + str(level))
 	$grid.queue_free()

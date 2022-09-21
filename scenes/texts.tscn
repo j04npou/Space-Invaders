@@ -37,13 +37,15 @@ animations = [ {
 script = ExtResource( 3 )
 
 [node name="score1_label" type="Label" parent="."]
-margin_right = 192.0
+margin_left = 93.0
+margin_right = 285.0
 margin_bottom = 28.0
 custom_fonts/font = SubResource( 1 )
 text = "  SCORE<1>  "
 
 [node name="score1" type="Label" parent="."]
-margin_right = 192.0
+margin_left = 93.0
+margin_right = 285.0
 margin_bottom = 73.0
 custom_fonts/font = SubResource( 1 )
 text = "0000"
@@ -51,31 +53,16 @@ align = 1
 valign = 2
 
 [node name="hiscore_label" type="Label" parent="."]
-margin_right = 600.0
+margin_left = 333.0
+margin_right = 525.0
 margin_bottom = 28.0
 custom_fonts/font = SubResource( 1 )
 text = "HI-SCORE"
 align = 1
 
 [node name="hiscore" type="Label" parent="."]
-margin_right = 600.0
-margin_bottom = 72.0
-custom_fonts/font = SubResource( 1 )
-text = "0000"
-align = 1
-valign = 2
-
-[node name="score2_label" type="Label" parent="."]
-margin_left = 402.0
-margin_right = 600.0
-margin_bottom = 28.0
-custom_fonts/font = SubResource( 1 )
-text = "  SCORE<2>  "
-align = 2
-
-[node name="score2" type="Label" parent="."]
-margin_left = 402.0
-margin_right = 600.0
+margin_left = 334.0
+margin_right = 526.0
 margin_bottom = 72.0
 custom_fonts/font = SubResource( 1 )
 text = "0000"
@@ -97,13 +84,22 @@ text = "3"
 align = 2
 valign = 2
 
-[node name="credits" type="Label" parent="."]
-margin_left = 386.0
+[node name="stage_label" type="Label" parent="."]
+margin_left = 438.0
 margin_top = 715.0
-margin_right = 604.0
+margin_right = 535.0
 margin_bottom = 739.0
 custom_fonts/font = SubResource( 1 )
-text = "CREDITS 08"
+text = "STAGE"
+valign = 2
+
+[node name="stage" type="Label" parent="."]
+margin_left = 550.0
+margin_top = 715.0
+margin_right = 593.0
+margin_bottom = 739.0
+custom_fonts/font = SubResource( 1 )
+text = "01"
 valign = 2
 
 [node name="lives_draw1" type="AnimatedSprite" parent="."]

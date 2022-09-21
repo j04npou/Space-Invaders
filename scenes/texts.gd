@@ -48,3 +48,8 @@ func update_lives(lives):
 		$lives_draw1.visible = false
 		$lives_draw2.visible = false
 		$lives_draw3.visible = false
+		
+func update_stage(stage):
+	$stage.text = str(stage)
+	if $stage.text.length() < 2:
+		$stage.text = "0" + $stage.text
