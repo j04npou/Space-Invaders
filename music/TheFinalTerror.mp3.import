@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/TheFinalTerror.mp3-4df43ac6c0467211f640379d8ec359ed.mp3str"
+
+[deps]
+
+source_file="res://music/TheFinalTerror.mp3"
+dest_files=[ "res://.import/TheFinalTerror.mp3-4df43ac6c0467211f640379d8ec359ed.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

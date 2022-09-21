@@ -73,6 +73,7 @@ func _on_Area2D_body_entered(body):
 	explode()
 
 func _on_Area2D_area_entered(area):
+	$Explosion.play()
 	area.get_parent()._on_AnimatedSprite_animation_finished()
 	explode()
 
