@@ -2,11 +2,17 @@ extends Node2D
 
 var firePressed = false
 
-func _unhandled_input(_event):
+func _input(event):
+
+	if event is InputEventScreenTouch:
+		if event.pressed and event.position.y > 85:
+			Input.action_release("ui_accept")
+	
 	if Input.is_action_just_released("ui_accept") and !firePressed:
 		$Timer.start()
 		firePressed = true
 		$fullScreenButton.visible = false
+		$PressStart.start_animation()
 
 func startGame():
 	var _none = get_tree().change_scene("res://scenes/decorated_game.tscn")

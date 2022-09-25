@@ -1,11 +1,13 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://fonts/pixelmix.ttf" type="DynamicFontData" id=1]
 [ext_resource path="res://scenes/pause.gd" type="Script" id=2]
+[ext_resource path="res://art/pause.png" type="Texture" id=3]
+[ext_resource path="res://art/pause_hover.png" type="Texture" id=4]
 
 [sub_resource type="DynamicFont" id=1]
 size = 100
-outline_size = 3
+outline_size = 8
 outline_color = Color( 0, 0, 0, 1 )
 font_data = ExtResource( 1 )
 
@@ -23,4 +25,18 @@ valign = 1
 [node name="Timer" type="Timer" parent="."]
 one_shot = true
 
+[node name="TextureButton" type="TextureButton" parent="."]
+modulate = Color( 1, 1, 1, 0.501961 )
+margin_left = -403.0
+margin_top = 9.0
+margin_right = -313.0
+margin_bottom = 95.0
+focus_mode = 0
+enabled_focus_mode = 0
+texture_normal = ExtResource( 3 )
+texture_hover = ExtResource( 4 )
+expand = true
+stretch_mode = 5
+
 [connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
+[connection signal="pressed" from="TextureButton" to="." method="_on_TextureButton_pressed"]

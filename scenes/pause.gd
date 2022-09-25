@@ -22,3 +22,7 @@ func _process(_delta):
 
 func _on_Timer_timeout():
 	get_tree().paused = false
+
+
+func _on_TextureButton_pressed():
+	Input.action_release("ui_cancel")

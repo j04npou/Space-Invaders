@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/reference_screenshoot.png-ba6ff7908186546aefc8390e02de9080.stex"
+path="res://.import/joystick_tip_LR.png-e3a87052009fd4931ecf731f9974eeae.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://reference_screenshoot.png"
-dest_files=[ "res://.import/reference_screenshoot.png-ba6ff7908186546aefc8390e02de9080.stex" ]
+source_file="res://joystick/textures/joystick_tip_LR.png"
+dest_files=[ "res://.import/joystick_tip_LR.png-e3a87052009fd4931ecf731f9974eeae.stex" ]
 
 [params]
 

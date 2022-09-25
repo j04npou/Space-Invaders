@@ -51,10 +51,10 @@ func _on_animation_finished():
 	emit_signal("dead")
 	queue_free()
 
-func _input(event):
-	if event is InputEventMouseButton:
-		if event.position.distance_to(global_position) <20:
-			die()
+#func _input(event):
+#	if event is InputEventMouseButton:
+#		if event.position.distance_to(global_position) <20:
+#			die()
 
 func _on_Area2D_body_entered(body):
 	body.get_parent().die()
